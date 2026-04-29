@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Каталог сервисов — ЛР-4</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <h1>🛠️ Каталог сервисов</h1>
+    <p class="subtitle">Лабораторная работа №4 — Регулярные выражения. Функции. Fetch.</p>
+  </header>
+
+  <main>
+
+    <!-- Демо-блок для practice-lr4.js (блоки A-E) -->
+    <section>
+      <h2>Теоретические задания (блоки A–E)</h2>
+      <div id="message" class="message"></div>
+      <div id="demoList"></div>
+      <p>Результаты блоков A–E выводятся в консоль браузера (F12 → Console).</p>
+    </section>
+
+    <!-- Форма добавления сервиса -->
+    <section>
+      <h2>Добавить сервис</h2>
+      <form id="addForm" novalidate>
+        <div class="form-row">
+          <label for="fTitle">Название сервиса</label>
+          <input id="fTitle" type="text" placeholder="Например: Сервис авторизации" />
+        </div>
+        <div class="form-row">
+          <label for="fValue">Рейтинг (value)</label>
+          <input id="fValue" type="number" placeholder="Например: 850" />
+        </div>
+        <div class="form-row">
+          <label for="fDate">Дата добавления (YYYY-MM-DD)</label>
+          <input id="fDate" type="text" placeholder="2025-06-01" />
+        </div>
+        <div class="form-row">
+          <label for="fEmail">Email контактного лица</label>
+          <input id="fEmail" type="text" placeholder="admin@company.ru" />
+        </div>
+        <button type="submit">Добавить в каталог</button>
+        <div id="formErrors" class="form-errors"></div>
+      </form>
+    </section>
+
+    <!-- Управление списком -->
+    <section>
+      <h2>Список сервисов</h2>
+
+      <div class="controls">
+        <button id="btnAll">Все</button>
+        <button id="btnNew">Только NEW</button>
+        <button id="btnSort">Сортировка ↓</button>
+        <button id="btnStats">Статистика</button>
+        <button id="btnFetch">⬇ Загрузить внешние</button>
+      </div>
+
+      <div class="filter-row">
+        <input id="searchInput" type="text" placeholder="Поиск по названию..." />
+        <button id="btnSearch">Найти</button>
+      </div>
+
+      <p id="countLabel" class="count-label"></p>
+      <div id="list"></div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>Дисциплина: Разработка web-приложений на языке JavaScript</p>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="validate.js"></script>
+  <script src="logic.js"></script>
+  <script src="api.js"></script>
+  <script src="practice-lr4.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
